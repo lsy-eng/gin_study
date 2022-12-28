@@ -15,7 +15,7 @@ type Product struct {
 }
 
 func main() {
-  db, err := gorm.Open(mysql.Open("root:123456@tcp(127.0.0.1:3306)/ginchat?charset=utf8mb4&parseTime=True&loc=Local"), &gorm.Config{}) //这部分下载了数据库回头看
+  db, err := gorm.Open(mysql.Open("root:123456@tcp(127.0.0.1:3306)/ginchat@localhost?charset=utf8mb4&parseTime=True&loc=Local"), &gorm.Config{}) //这部分下载了数据库回头看
   if err != nil {
     panic("failed to connect database")
   }
